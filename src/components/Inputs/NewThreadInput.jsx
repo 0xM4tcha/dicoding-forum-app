@@ -22,6 +22,7 @@ function NewThreadInput({ createThread }) {
       <input
         name="title"
         type="text"
+        data-testid="title"
         placeholder="Judul"
         value={title}
         onChange={onTitleChange}
@@ -29,6 +30,7 @@ function NewThreadInput({ createThread }) {
       <input
         name="category"
         type="text"
+        data-testid="category"
         placeholder="Kategori"
         value={category}
         onChange={onCategoryChange}
@@ -36,11 +38,12 @@ function NewThreadInput({ createThread }) {
       <div
         id="body"
         className="input-body"
+        data-testid="body"
         contentEditable
         value={body}
         onChange={onBodyChange}
       />
-      <button type="submit">Buat</button>
+      <button type="submit" data-testid="create-button">Buat</button>
     </form>
   );
 }

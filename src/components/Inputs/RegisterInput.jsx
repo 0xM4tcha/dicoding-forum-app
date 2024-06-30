@@ -20,6 +20,7 @@ function RegisterInput({ regist }) {
       <input
         name="name"
         type="text"
+        data-testid="name"
         placeholder="Name"
         required
         value={name}
@@ -28,6 +29,7 @@ function RegisterInput({ regist }) {
       <input
         name="email"
         type="email"
+        data-testid="email"
         placeholder="Email"
         required
         value={email}
@@ -36,6 +38,7 @@ function RegisterInput({ regist }) {
       <input
         name="password"
         type="password"
+        data-testid="password"
         placeholder="Password"
         required
         value={password}
