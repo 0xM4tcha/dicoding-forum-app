@@ -47,7 +47,7 @@ const CommentShape = PropTypes.shape({
 
 CommentList.propTypes = {
   comments: PropTypes.arrayOf(CommentShape).isRequired,
-  authUser: PropTypes.shape(authUserShape).isRequired,
+  authUser: PropTypes.shape(authUserShape),
   upVote: PropTypes.func.isRequired,
   downVote: PropTypes.func.isRequired,
 };

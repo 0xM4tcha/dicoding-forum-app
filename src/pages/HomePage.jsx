@@ -8,6 +8,7 @@ import {
 import AddButton from '@/components/Buttons/AddButton';
 import ThreadList from '@/components/Threads/ThreadList';
 import CategoryList from '@/components/Categories/CategoryList';
+import Container from '@/components/styled/Container';
 
 function HomePage() {
   const dispatch = useDispatch();
@@ -69,7 +70,7 @@ function HomePage() {
   };
 
   return (
-    <main>
+    <Container>
       <section className="home-page">
         <CategoryList
           categories={categories}
@@ -84,7 +85,7 @@ function HomePage() {
         />
         {authUser && <AddButton />}
       </section>
-    </main>
+    </Container>
   );
 }
 

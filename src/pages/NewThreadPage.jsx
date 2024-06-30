@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import NewThreadInput from '@/components/Inputs/NewThreadInput';
 import { asyncCreateThread } from '@/states/threads/action';
+import Container from '@/components/styled/Container';
 
 function NewThreadPage() {
   const dispatch = useDispatch();
@@ -15,12 +16,12 @@ function NewThreadPage() {
   };
 
   return (
-    <main>
+    <Container>
       <div className="new-thread-page">
         <h2>Buat Diskusi Baru</h2>
         <NewThreadInput createThread={onCreateThread} />
       </div>
-    </main>
+    </Container>
   );
 }
 
