@@ -71,7 +71,7 @@ function DetailPage() {
             <CommentInput comment={onSubmitComment} />
           ) : (
             <p className="thread-comment__not_login">
-              <Link to="/login">Login</Link> untuk memberi komentar
+              <Link to="/login">Login</Link> untuk memberi komentar 
             </p>
           )}
         </div>
