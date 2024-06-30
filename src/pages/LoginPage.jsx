@@ -20,7 +20,7 @@ function LoginPage() {
         <h2>Login</h2>
         <LoginInput login={onLogin} />
         <p className="register-info">
-          Belum punya akun? <Link to="/register">Daftar di sini.</Link>
+          Belum punya akun ? <Link to="/register">Daftar di sini.</Link>
         </p>
       </section>
     </main>
