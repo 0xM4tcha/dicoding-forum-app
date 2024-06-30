@@ -62,6 +62,7 @@ function asyncCreateThread({ title, body, category }) {
     try {
       const thread = await api.createThread({ title, body, category });
       dispatch(createThreadActionCreator(thread));
+      return thread;
     } catch (error) {
       alert(error.message);
     }

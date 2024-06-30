@@ -125,10 +125,10 @@ const api = (() => {
     }
 
     const {
-      data: { talk },
+      data: { thread },
     } = responseJson;
 
-    return talk;
+    return thread;
   }
 
   async function getAllThreads() {

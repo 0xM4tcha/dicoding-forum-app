@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import NewThreadInput from '@/components/Inputs/NewThreadInput';
 import { asyncCreateThread } from '@/states/threads/action';
@@ -8,12 +8,19 @@ import Container from '@/components/styled/Container';
 function NewThreadPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const authUser = useSelector((states) => states.authUser);
 
-  const onCreateThread = ({ title, body, category }) => {
-    dispatch(asyncCreateThread({ title, body, category }));
+  const onCreateThread = async ({ title, body, category }) => {
+    const thread = await dispatch(asyncCreateThread({ title, body, category }));
 
-    navigate('/');
+    if (thread) {
+      navigate('/');
+    }
   };
+
+  if (!authUser) {
+    return (<></>);
+  }
 
   return (
     <Container>

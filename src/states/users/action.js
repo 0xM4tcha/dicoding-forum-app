@@ -22,9 +22,9 @@ function asyncRegisterUser({ name, email, password }) {
       await api.register({ name, email, password });
     } catch (error) {
       return error;
+    } finally {
+      dispatch(hideLoading());
     }
-
-    dispatch(hideLoading());
   };
 }
 
