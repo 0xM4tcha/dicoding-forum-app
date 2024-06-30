@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { asyncSetAuthUser } from '@/states/authUser/action';
 import LoginInput from '@/components/Inputs/LoginInput';
+import Container from '@/components/styled/Container';
 
 function LoginPage() {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ function LoginPage() {
   };
 
   return (
-    <main>
+    <Container>
       <section className="login-page">
         <h2>Login</h2>
         <LoginInput login={onLogin} />
@@ -23,7 +24,7 @@ function LoginPage() {
           Belum punya akun ? <Link to="/register">Daftar di sini.</Link>
         </p>
       </section>
-    </main>
+    </Container>
   );
 }
 

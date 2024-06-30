@@ -12,6 +12,7 @@ import {
 import ThreadDetail from '@/components/Threads/ThreadDetail';
 import CommentInput from '@/components/Inputs/CommentInput';
 import CommentList from '@/components/Comments/CommentList';
+import Container from '@/components/styled/Container';
 
 function DetailPage() {
   const dispatch = useDispatch();
@@ -56,7 +57,7 @@ function DetailPage() {
   const hasVotedComment = () => false;
 
   return (
-    <main>
+    <Container>
       <ThreadDetail
         thread={thread}
         upVote={onUpVote}
@@ -86,7 +87,7 @@ function DetailPage() {
           />
         </div>
       </div>
-    </main>
+    </Container>
   );
 }
 

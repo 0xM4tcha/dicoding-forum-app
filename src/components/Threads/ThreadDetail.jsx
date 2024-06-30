@@ -55,9 +55,9 @@ const ThreadShape = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   createdAt: PropTypes.string.isRequired,
-  ownerId: PropTypes.string.isRequired,
-  totalComments: PropTypes.number.isRequired,
-  user: PropTypes.shape(userShape).isRequired,
+  ownerId: PropTypes.string,
+  totalComments: PropTypes.number,
+  user: PropTypes.shape(userShape),
   upVotesBy: PropTypes.arrayOf(PropTypes.string).isRequired,
   downVotesBy: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
