@@ -20,11 +20,12 @@ function CommentInput({ comment }) {
       <div
         id="content"
         className="comment-input__field"
+        data-testid="content"
         contentEditable
         value={content}
         onChange={onContentChange}
       />
-      <button type="submit">Kirim</button>
+      <button type="submit" data-testid="submit-button">Kirim</button>
     </form>
   );
 }
