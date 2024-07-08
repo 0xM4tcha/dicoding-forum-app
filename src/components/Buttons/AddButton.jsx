@@ -5,7 +5,7 @@ import NewThreadIcon from '@/assets/NewThreadIcon';
 function AddButton() {
   return (
     <Link to="/new">
-      <button type="button" className="new-thread-button">
+      <button type="button" data-testid="add-button" className="new-thread-button">
         <NewThreadIcon />
       </button>
     </Link>

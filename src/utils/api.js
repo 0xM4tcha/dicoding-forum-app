@@ -85,7 +85,7 @@ const api = (() => {
   }
 
   async function getOwnProfile() {
-    if (getAccessToken() === '') return;
+    if (!getAccessToken()) return;
     const response = await _fetchWithAuth(`${BASE_URL}/users/me`);
 
     const responseJson = await response.json();

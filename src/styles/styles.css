@@ -13,9 +13,7 @@
 }
 
 body {
-  background-color: #f4f4f5;
   background-color: var(--gray);
-  color: #3f3f46;
   color: var(--text-on-primary);
 }
 
@@ -56,20 +54,6 @@ header {
 }
 
 /* body */
-
-main {
-  background-color: #fff;
-  background-color: var(--primary);
-  margin: 0 auto;
-  max-width: 800px;
-  min-height: 100vh;
-  padding: 64px 0;
-}
-
-main {
-  display: block;
-  unicode-bidi: isolate;
-}
 
 section {
   display: block;
@@ -221,7 +205,6 @@ footer {
 
 .navigation-bottom {
   align-items: center;
-  background-color: #fff;
   background-color: var(--primary);
   border-top: 1px solid #d1d5db;
   bottom: 0;
@@ -242,7 +225,6 @@ footer {
   align-items: center;
   background-color: initial;
   border: 0;
-  color: #2d3e50;
   color: var(--secondary);
   cursor: pointer;
   display: flex;

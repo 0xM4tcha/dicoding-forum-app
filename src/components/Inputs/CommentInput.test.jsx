@@ -41,10 +41,12 @@ describe('CommentInput component', () => {
     const sendButton = screen.getByTestId('submit-button');
     
     // Action
-    userEvent.click(sendButton);
+    await userEvent.click(sendButton);
     
     // Assert
-    expect(sendButton).toBeVisible(true);
+    expect(onSubmit).toBeCalledWith({
+      content: contentDiv.textContent
+    });
   });
 
 });
