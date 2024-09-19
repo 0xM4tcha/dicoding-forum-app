@@ -8,7 +8,7 @@
 import { describe, beforeEach, afterEach, vi, it, expect } from 'vitest';
 import { hideLoading, showLoading } from 'react-redux-loading-bar';
 import api from '@/utils/api';
-import { asyncReceiveLeaderboards, receiveLeaderboardsActionCreator } from './action';
+import { asyncReceiveLeaderboards } from './action';
 
 const fakeLeaderboardsResponse = [
   {
@@ -55,7 +55,6 @@ describe('asyncReceiveLeaderboards thunk', () => {
  
     // assert
     expect(dispatch).toHaveBeenCalledWith(showLoading());
-    // expect(dispatch).toHaveBeenCalledWith(receiveLeaderboardsActionCreator);
     expect(dispatch).toHaveBeenCalledWith(hideLoading());
   });
 

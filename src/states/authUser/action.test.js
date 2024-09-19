@@ -9,7 +9,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import api from "@/utils/api";
 import { hideLoading, showLoading } from 'react-redux-loading-bar';
-import { asyncSetAuthUser, setAuthUserActionCreator } from './action';
+import { asyncSetAuthUser } from './action';
 
 const fakeAuthResponse = {
   id: "user-5s-UlbouJXw84LnN",
